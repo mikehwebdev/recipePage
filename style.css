@@ -77,14 +77,6 @@ body {
     color: var(--wenge-brown);
 }
 
-.prep {
-    grid-area: prep;
-    background-color: var(--snow);
-    padding: 1.5rem 1.5rem;
-    list-style-type: inside;
-    border-radius: .75rem;
-}
-
 .bullet-point {
     font-family: 'Outfit', sans-serif;
     color: var(--wenge-brown);
@@ -100,6 +92,22 @@ body {
     font-size: .9rem;
 }
 
+.prep {
+    grid-area: prep;
+    background-color: var(--snow);
+    padding: 1.5rem 1.5rem;
+    list-style-type: inside;
+    border-radius: .75rem;
+}
+
+.prep-list > .bullet-point {
+    padding-bottom: .5rem;
+}
+
+.prep-list > .bullet-point:last-of-type {
+    padding-bottom: 0;
+}
+
 .bold-text {
     font-weight: 700;
 }
@@ -113,7 +121,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.sub-title {
+.ingredients-sub-title {
     font-family: 'Young Serif', sans-serif;
     color: var(--brandy-red);
     font-weight: 400;
