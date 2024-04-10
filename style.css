@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --white: #fff;
+    --dark-charcoal: #312E2C;
+    --dark-raspberry: #7A284E;
+    --snow:#FFF7FB;
+    --wenge-brown:#5F564D;
+    --brandy-red:#854632;
+    --eggshell:#F3E5D7;
+    --whitecoffee:#E3DDD7;
+}
+
+body {
+    background-color: var(--eggshell);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    min-width:23.438rem;
+    max-width: 46rem;
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: 2rem minmax(19.438rem, 41rem) 2rem;
+    grid-template-rows: auto 2.5rem auto 1.5rem auto 2rem auto 2rem auto auto auto;
+    grid-template-areas: 
+    ". img ."
+    ". . ." 
+    ". title ."
+    ". . ."
+    ". intro ."
+    ". . ."
+    ". prep ."
+    ". . ."
+    ". ing ."
+    ". . ."
+    ". ins ."
+    ". . ."
+    ". nut ."
+    ;
+}
+
+.header-image-container {
+    grid-area: img;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.header-image {
+    width: 100%;
+    height: auto;
+}
+
+.title {
+    grid-area: title;
+    font-family: 'Young Serif', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+    color: var(--dark-charcoal);
+}
+
+.intro {
+    grid-area: intro;
+    font-weight: 400;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--wenge-brown);
+}
+
+.prep {
+    grid-area: prep;
+    background-color: var(--snow);
+    padding: 1.5rem 1.5rem;
+    list-style-type: inside;
+    border-radius: .75rem;
+}
+
+.bullet-point {
+    font-family: 'Outfit', sans-serif;
+    color: var(--wenge-brown);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-left: 1rem;
+    margin-left: 1.5rem;
+}
+
+.bullet-point::marker {
+    color: var(--dark-raspberry);
+    font-size: .9rem;
+}
+
+.bold-text {
+    font-weight: 700;
+}
+
+.prep-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    color: var(--dark-raspberry);
+    margin-bottom: 1rem;
+}
+
+.sub-title {
+    font-family: 'Young Serif', sans-serif;
+    color: var(--brandy-red);
+    font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+}
+
+.ingredients {
+    grid-area: ing;
+    padding-bottom: 2rem;
+    border-bottom: solid 1px var(--whitecoffee);
+}
+
+.ingredients-list {
+    padding-top: 1.5rem
+}
+
+.ingredients-list > .bullet-point {
+    padding-bottom: .5rem;
+}
+
+.ingredients-list > .bullet-point:last-of-type {
+    padding-bottom: 0;
+}
+
+.instructions {
+    grid-area: ins;
+    padding: 2rem 0;
+    border-bottom: solid 1px var(--whitecoffee);
+}
+
+.instructions-list {
+    padding-top: 1.5rem;
+}
+
+.instructions-list > .bullet-point {
+    padding-bottom: .5rem;
+}
+
+.instructions-list > .bullet-point:last-of-type {
+    padding-bottom: 0;
+}
+
+.instructions-list > .bullet-point::marker {
+    font-weight: 700;
+    color: var(--brandy-red);
+}
+
+.nutrition {
+    grid-area: nut;
+    padding: 2rem 0;
+}
+
+.nutrition-description {
+    padding: 1.5rem 0;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--wenge-brown);
+    padding-bottom: 1.5rem;
+}
+
+.row-container {
+    display: flex;
+    border-bottom: 1px solid var(--whitecoffee);
+    padding: 0.75rem 0;
+    justify-content: flex-start;
+}
+
+.row-container:first-of-type {
+    padding-top: 0;
+}
+
+.row-container:last-of-type {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.row-name {
+    font-family: 'Outfit', sans-serif;
+    width: 50%;
+    padding-left: 2rem;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--wenge-brown);
+}
+
+.row-value {
+    font-family: 'Outfit', sans-serif;
+    width: 50%;
+    padding-left: 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--brandy-red);
+}
+
+@media screen and (min-width:656px ) {
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .card {
+        margin: 7.6875rem 0;
+        border-radius: 1.5rem;
+        grid-template-columns: 2.5rem minmax(19.438rem, 41rem) 2.5rem;
+        grid-template-rows: 2.5rem auto 2.5rem auto 1.5rem auto 2rem auto 2rem auto auto auto;
+        grid-template-areas: 
+            ". . ."
+            ". img ."
+            ". . ." 
+            ". title ."
+            ". . ."
+            ". intro ."
+            ". . ."
+            ". prep ."
+            ". . ."
+            ". ing ."
+            ". . ."
+            ". ins ."
+            ". . ."
+            ". nut ."
+    }
+
+    .row-value {
+                padding-left: .5rem;
+    }
+
+    .prep {
+        padding: 1.75rem 1.75rem;
+    }
+}
