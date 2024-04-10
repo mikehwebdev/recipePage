@@ -70,6 +70,10 @@ body {
 
 .intro {
     grid-area: intro;
+  
+}
+
+.intro-text {
     font-weight: 400;
     font-family: 'Outfit', sans-serif;
     font-size: 1rem;
@@ -134,7 +138,6 @@ body {
     padding-bottom: 2rem;
     border-bottom: solid 1px var(--whitecoffee);
 }
-
 
 
 .ingredients-list {
